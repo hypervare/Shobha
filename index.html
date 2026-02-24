@@ -342,12 +342,14 @@
 
 </section>
 <script>
- const track = document.getElementById("sliderTrack");
+const track = document.getElementById("sliderTrack");
 const cards = document.querySelectorAll(".property-card");
 const prevBtn = document.getElementById("prev");
 const nextBtn = document.getElementById("next");
 
 let index = 0;
+let autoInterval;
+const AUTO_DELAY = 3000; // 3 seconds
 
 function getSlideWidth() {
   const card = cards[0];
@@ -359,21 +361,42 @@ function updateSlider() {
   track.style.transform = `translateX(-${index * getSlideWidth()}px)`;
 }
 
-nextBtn.addEventListener("click", () => {
-  if (index < cards.length - 1) {
-    index++;
+/* ---------- AUTO SLIDE ---------- */
+function startAutoSlide() {
+  autoInterval = setInterval(() => {
+    if (index < cards.length - 1) {
+      index++;
+    } else {
+      index = 0; // loop back
+    }
     updateSlider();
-  }
+  }, AUTO_DELAY);
+}
+
+function stopAutoSlide() {
+  clearInterval(autoInterval);
+}
+
+/* ---------- MANUAL CONTROLS ---------- */
+nextBtn.addEventListener("click", () => {
+  stopAutoSlide();
+  index = index < cards.length - 1 ? index + 1 : 0;
+  updateSlider();
+  startAutoSlide();
 });
 
 prevBtn.addEventListener("click", () => {
-  if (index > 0) {
-    index--;
-    updateSlider();
-  }
+  stopAutoSlide();
+  index = index > 0 ? index - 1 : cards.length - 1;
+  updateSlider();
+  startAutoSlide();
 });
 
+/* ---------- RESPONSIVE ---------- */
 window.addEventListener("resize", updateSlider);
+
+/* ---------- INIT ---------- */
+startAutoSlide();
 </script>
 
 
@@ -937,8 +960,8 @@ RERA Registration Details: Coming Soon ✦ Disclaimer & Privacy Policy ✦</span
 
     <button class="close-btn">✕</button>
 
-    <h2>Need Help? Let’s Talk</h2>
-    <p>Talk to an expert today!</p>
+    <h2>https://hypervare.github.io/Shobha/</h2>
+    <p>Speak With a Project Specialist Today!</p>
 
     <form>
 
@@ -984,6 +1007,7 @@ RERA Registration Details: Coming Soon ✦ Disclaimer & Privacy Policy ✦</span
 
 </body>
 </html>
+
 
 
 
