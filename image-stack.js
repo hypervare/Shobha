@@ -299,7 +299,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const open = () => overlay.classList.add("active");
     const close = () => overlay.classList.remove("active");
 
-    setTimeout(open, 3000);
+    setTimeout(open, 10000);
     openBtns.forEach(b => b.addEventListener("click", open));
     closeBtn?.addEventListener("click", close);
     overlay.addEventListener("click", e => {
@@ -399,3 +399,4 @@ if (imagePart && firstImage) {
   }, 2000);
 }
 });
+
