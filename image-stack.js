@@ -234,10 +234,10 @@ document.addEventListener("DOMContentLoaded", () => {
       thumb:"./assets/floorplan1.jpg"
     },
     {
-      title:"SOBHA 63A – 3 BHK",
+      title:"SOBHA 63A – 4.5 BHK + S",
       location:"Golf Course Ext Rd, Gurgaon",
       tagline:"Luxury for families",
-      desc:"2300 sq.ft premium homes.",
+      desc:"3000 sq.ft premium homes.",
       img:"./assets/floorplan5.png",
       thumb:"https://images.unsplash.com/photo-1599423300746-b62533397364"
     },
@@ -393,4 +393,5 @@ if (imagePart && firstImage) {
     secondImage.classList.add("show");
   }, 2000);
 }
+
 });
