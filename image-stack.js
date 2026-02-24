@@ -130,18 +130,18 @@ document.addEventListener("DOMContentLoaded", () => {
   if (section2 && bgTrack) {
     const slides = [
       {
-        title: "Luxury Villa Sales",
-        desc: "Handpicked villas in premium locations.",
+        title: "Signature 3 & 4 BHK Residences",
+        desc: "Every residence is crafted to maximise natural light, ventilation, and privacy — built for refined family living on Golf Course Extension Road.",
         img: "./assets/B2.webp"
       },
       {
-        title: "Bespoke Interiors",
-        desc: "Tailored interior experiences.",
+        title: "Architectural Excellence",
+        desc: "Designed with a focus on low-density planning and elegant vertical living, Sobha Sector 63A balances modern elevation with timeless design principles.",
         img: "./assets/About.webp"
       },
       {
-        title: "Modern Living",
-        desc: "Smart spaces for refined lifestyles.",
+        title: "Elevated Private Living",
+        desc: "Experience a refined lifestyle with controlled density, landscaped open areas, and premium clubhouse amenities.Built for those who value space, privacy, and enduring quality.",
         img: "./assets/img105.jpg"
       }
       
@@ -395,3 +395,4 @@ if (imagePart && firstImage) {
 }
 
 });
+
