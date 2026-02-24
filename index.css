@@ -1761,21 +1761,36 @@ body{
 
 /* BRAND */
 .footer-brand{
-  max-width:520px;
-  margin-bottom:70px;
+  /* max-width:520px; */
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom:0px;
+  text-align: center;
 }
 
 .footer-brand .logo{
-  font-size:26px;
+  font-size:30px;
   font-weight:700;
+  
   letter-spacing:1px;
   margin-bottom:14px;
 }
 
 .brand-desc{
-  font-size:16px;
+  font-size:20px;
   line-height:1.7;
   opacity:0.85;
+}
+.main-company{
+  margin-top: 150px;
+}
+.hyper{
+  font-size: 20px;
+  font-weight: bolder;
+}
+.hyper a{
+  text-decoration: none;
+  color: black;
 }
 
 /* ===============================
@@ -2810,6 +2825,7 @@ body {
   height: 10vh;
   width: 100%;
 }
+
 
 
 
