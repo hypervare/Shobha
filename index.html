@@ -1006,25 +1006,27 @@ window.addEventListener("resize", updateSlider);
 <div class="popup-overlay" id="popupOverlay">
   <div class="popup-form">
 
-    <button class="close-btn " >✕</button>
+    <button class="close-btn">✕</button>
 
     <h2>Need Help? Let’s Talk</h2>
     <p>Talk to an expert today!</p>
 
     <form>
+
       <input type="text" placeholder="Full Name" required>
       <input type="email" placeholder="Email Address" required>
       <input type="tel" placeholder="Phone Number" required>
-      <textarea placeholder="Your Message"></textarea>
 
+      <!-- CONSENT (always checked & locked) -->
       <label class="checkbox">
-        <input type="checkbox" required>
+        <input type="checkbox" checked disabled>
         I authorize company representatives to Call, SMS, Email or WhatsApp me.
       </label>
 
       <button type="submit" class="submit-btn">
         Submit
       </button>
+
     </form>
 
   </div>
@@ -1034,4 +1036,5 @@ window.addEventListener("resize", updateSlider);
 
 
 </body>
+
 </html>
