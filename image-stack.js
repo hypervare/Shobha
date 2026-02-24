@@ -130,18 +130,18 @@ document.addEventListener("DOMContentLoaded", () => {
   if (section2 && bgTrack) {
     const slides = [
       {
-        title: "Signature 3 & 4 BHK Residences",
-        desc: "Every residence is crafted to maximise natural light, ventilation, and privacy — built for refined family living on Golf Course Extension Road.",
+        title: "Luxury Villa Sales",
+        desc: "Handpicked villas in premium locations.",
         img: "./assets/B2.webp"
       },
       {
-        title: "Architectural Excellence",
-        desc: "Designed with a focus on low-density planning and elegant vertical living, Sobha Sector 63A balances modern elevation with timeless design principles.",
+        title: "Bespoke Interiors",
+        desc: "Tailored interior experiences.",
         img: "./assets/About.webp"
       },
       {
-        title: "Elevated Private Living",
-        desc: "Experience a refined lifestyle with controlled density, landscaped open areas, and premium clubhouse amenities.Built for those who value space, privacy, and enduring quality.",
+        title: "Modern Living",
+        desc: "Smart spaces for refined lifestyles.",
         img: "./assets/img105.jpg"
       }
       
@@ -220,24 +220,27 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title:"SOBHA 63A – 3 BHK",
       location:"Golf Course Ext Rd, Gurgaon",
+      price:"₹ 5.70Cr*",
       tagline:"Luxury for families",
       desc:"2300 sq.ft premium homes.",
       img:"./assets/floorplan2.png",
       thumb:"https://images.unsplash.com/photo-1599423300746-b62533397364"
     },
     {
-      title:"SOBHA 63A – 4 BHK",
+      title:"SOBHA 63A – 4 + S BHK",
       location:"Sector 63A",
+      price:"On Request",
       tagline:"Elite low-density living",
       desc:"2700 sq.ft residences.",
       img:"./assets/floorplan1.jpg",
       thumb:"./assets/floorplan1.jpg"
     },
     {
-      title:"SOBHA 63A – 4.5 BHK + S",
+      title:"SOBHA 63A – 4.5 BHK",
       location:"Golf Course Ext Rd, Gurgaon",
+      price:"On Request",
       tagline:"Luxury for families",
-      desc:"3000 sq.ft premium homes.",
+      desc:"2300 sq.ft premium homes.",
       img:"./assets/floorplan5.png",
       thumb:"https://images.unsplash.com/photo-1599423300746-b62533397364"
     },
@@ -251,6 +254,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const tag = document.getElementById("villaTagline");
   const desc = document.getElementById("villaDesc");
   const num = document.getElementById("villaIndex");
+  const price = document.getElementById("villaPrice");
 
   if (mainImg) {
     let i = 0;
@@ -259,6 +263,7 @@ document.addEventListener("DOMContentLoaded", () => {
       mainImg.src = v.img;
       thumbImg.src = v.thumb;
       title.textContent = v.title;
+      price.textContent = v.price
       loc.textContent = v.location;
       tag.textContent = v.tagline;
       desc.textContent = v.desc;
@@ -393,6 +398,4 @@ if (imagePart && firstImage) {
     secondImage.classList.add("show");
   }, 2000);
 }
-
 });
-
