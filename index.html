@@ -32,14 +32,15 @@
     <!-- NAV LINKS -->
     <nav class="nav-links" id="navLinks">
       <a href="#lux-hero">Home</a>
-      <a href="#about">About Us</a>
-      <a href="#services">Services</a>
-      <a href="#project">Projects</a>
-      <a href="#testimonial">Testimonials</a>
+      <a href="#services">Highlights</a>
+      <a href="#project">Floor Plans</a>
+      <a href="#luxurySection">Projects</a>
+      <a href="#artCluster">Ammenities</a>
+      <a href="#location">Location</a>
     </nav>
 
     <!-- CTA -->
-    <button class="nav-cta open-form-btn" id="openFormBtn">Book a Consultation</button>
+    <button class="nav-cta open-form-btn" id="openFormBtn">Contact Us</button>
 
     <!-- HAMBURGER -->
     <div class="hamburger" id="hamburger">
@@ -53,10 +54,11 @@
   <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
       <a href="#lux-hero">Home</a>
-      <a href="#about">About Us</a>
-      <a href="#services">Services</a>
-      <a href="#project">Projects</a>
-      <a href="#testimonial">Testimonials</a>
+      <a href="#services">Highlights</a>
+      <a href="#project">Floor Plans</a>
+      <a href="#luxurySection">Projects</a>
+      <a href="#artCluster">Ammenities</a>
+      <a href="#location">Location</a>
     <button class="nav-cta mobile-cta" id="openFormBtn">Book a Consultation</button>
   </div>
 </header>
@@ -104,7 +106,7 @@
       </p>
 
       <button class="lux-btn open-form-btn" id="lux-btn1" >
-        Talk to an Expert →
+        Download Brochure →
       </button>
     </div>
 
@@ -170,7 +172,7 @@
 
       <div class="cta-button">
         <button class="lux-btn">
-          <span class="text" id="openFormBtn"> Explore Sobha 63A</span>
+          <span class="text" id="openFormBtn"> <a href="#explore" id="explore" class="openFormBtn">Explore Sobha 63A</a></span>
           <span class="icon">↗</span>
         </button>
       </div>
@@ -435,7 +437,7 @@ window.addEventListener("resize", updateSlider);
     </div>
 
    
-    <div class="side left">[ Our Services ]</div>
+    <!-- <div class="side left">[ Our Services ]</div> -->
     <div class="side right">[ Keep Scrolling ]</div>
 
   </div>
@@ -582,6 +584,7 @@ window.addEventListener("resize", updateSlider);
     <!-- LEFT IMAGE AREA -->
     <div class="villa-left">
       <div class="overlay"></div>
+      <div class="villa-bg"></div>
 
       <!-- MAIN IMAGE (JS TARGET) -->
       <img class="main-img" id="mainImg" alt="Main villa image">
@@ -594,12 +597,7 @@ window.addEventListener("resize", updateSlider);
     <div class="villa-right">
 
       <!-- STATIC LIST (OPTIONAL / VISUAL ONLY) -->
-      <div class="top-list">
-        <p>[01] VILLA SERENE</p>
-        <p>[02] CASA ELAN</p>
-        <p>[03] THE OASIS</p>
-        <p>[04] MAISON AZURE</p>
-      </div>
+
 
       <!-- COUNTER (JS TARGET) -->
       <div class="number" id="villaIndex">01</div>
@@ -611,6 +609,30 @@ window.addEventListener("resize", updateSlider);
 
         <p class="desc-title" id="villaTagline"></p>
         <p class="desc" id="villaDesc"></p>
+        <!-- PROPERTY QUICK DETAILS -->
+<div class="villa-meta">
+  <span>3, 4 & 4.5 BHK</span>
+  <span>2300 – 3000 Sq. Ft.</span>
+  <span>Aravalli Facing</span>
+  <span>New Launch</span>
+</div>
+
+<!-- PRICE BLOCK -->
+<div class="villa-price">
+  <small>Starting Price</small>
+  <strong>₹ 5.70 Cr* Onwards</strong>
+</div>
+
+<!-- ACTION BUTTONS -->
+<div class="villa-actions">
+  <button class="primary-btn open-form-btn">
+    View Price List
+  </button>
+
+  <a href="#" class="text-link">
+    View Floor Plans →
+  </a>
+</div>
 
         <div class="more">More Details</div>
       </div>
@@ -649,8 +671,8 @@ window.addEventListener("resize", updateSlider);
 
   <div class="cluster-text">
     <h2 class="cluster-title">
-      Discover your next<br>
-      <span>masterpiece.</span>
+      Discover our best<br>
+      <span>Services.</span>
     </h2>
   </div>
 
@@ -690,7 +712,7 @@ window.addEventListener("resize", updateSlider);
 
 
 
-<section class="contact-cover-section">
+<section class="contact-cover-section" id="location">
 
   <!-- Background Overlay -->
   <div class="contact-overlay"></div>
@@ -756,25 +778,40 @@ window.addEventListener("resize", updateSlider);
       <h3>Tell Us What You Need</h3>
       <p>Our experts are ready to assist you.</p>
 
-      <form class="contact-form">
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email Address" required>
-        <input type="tel" placeholder="Phone Number" required>
+<form class="contact-form">
 
-        <textarea placeholder="Your Message"></textarea>
+  <input type="text" placeholder="Full Name" aria-label="Full Name" required>
+  <input type="email" placeholder="Email Address" aria-label="Email Address" required>
+  <input type="tel" placeholder="Phone Number" aria-label="Phone Number" required>
 
-        <label class="consent">
-          <input type="checkbox" required>
-          I authorize contact via Call, SMS, Email or WhatsApp.
-        </label>
+  <label class="consent">
+    <input type="checkbox" checked disabled>
+    I authorize contact via Call, SMS, Email or WhatsApp.
+  </label>
 
-        <button type="submit">Submit</button>
-      </form>
+  <button type="submit">Request Call Back</button>
+
+</form>
 
     </div>
 
   </div>
 
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="divider map-section">
+  
 </section>
 
 
@@ -797,162 +834,68 @@ window.addEventListener("resize", updateSlider);
 
 
 
-<section class="trust-frame" id="testimonial">
-
-  <!-- LEFT -->
-  <div class="trust-left">
-    <img
-      class="trust-thumb"
-      src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
-      alt="Client"
-    />
-
-    <h2>
-      Voices of Trust,<br>
-      Stories of Success.
-    </h2>
-
-    <div class="trust-nav">
-      <button id="trustPrev" aria-label="Previous testimonial">‹</button>
-      <button id="trustNext" aria-label="Next testimonial">›</button>
-    </div>
-  </div>
-
-  <!-- RIGHT -->
-  <div class="trust-right">
-    <div class="trust-slider">
-      <div class="trust-track" id="trustTrack">
-
-        <div class="trust-card">
-          <span>01 Testimonial</span>
-          <p>
-            The project reflects a rare balance of luxury and functionality.
-            Spacious layouts, premium finishes, and the sports-focused lifestyle
-            make it a standout investment on Golf Course Extension Road.
-          </p>
-          <strong>Vikram Malhotra</strong>
-          <small>Business Owner</small>
-        </div>
-
-        <div class="trust-card">
-          <span>02 Testimonial</span>
-          <p>
-            What impressed me most was the attention to detail—from the
-            architectural planning to the clubhouse amenities. Sobha’s quality
-            is evident at every level.
-          </p>
-          <strong>Pooja Iyer</strong>
-          <small>Chartered Accountant</small>
-        </div>
-
-        <div class="trust-card">
-          <span>03 Testimonial</span>
-          <p>
-            This development offers more than just a home. The low-density
-            layout, Aravalli views, and connectivity make it ideal for long-term
-            living and appreciation.
-          </p>
-          <strong>Amit Verma</strong>
-          <small>Senior Project Manager</small>
-        </div>
-
-        <div class="trust-card">
-          <span>04 Testimonial</span>
-          <p>
-            From construction quality to lifestyle amenities, everything feels
-            thoughtfully curated. The sports arena and green spaces truly set
-            this project apart from others in Gurgaon.
-          </p>
-          <strong>Ananya Sharma</strong>
-          <small>Marketing Director</small>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-</section>
 
 
 
 
 
+<footer class="editorial-footer">
 
-
-
-
-
-
-
-
-
-
-
-
-
-    <footer class="lux-footer">
-
-  <!-- background image -->
-  <div class="lux-bg"></div>
-
-  <!-- marquee -->
-  <div class="lux-footer-marquee">
-    <div class="lux-footer-marquee-track">
-      <span>PROPERTY SOLUTIONS — CONTACT US ✶ PREMIUM LIVING</span>
-      <span>PROPERTY SOLUTIONS — CONTACT US ✶ PREMIUM LIVING</span>
-    </div>
-  </div>
-
-  <!-- content -->
-  <div class="lux-footer-content">
-
-    <!-- LEFT -->
-    <div class="lux-footer-left">
-      <p>
-        10, Gaza <br>
-        Jaffa College Tel Aviv and Dakar,<br>
-        Palestine
+  <!-- TOP BRAND BLOCK -->
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="logo">SOBHA 63A</div>
+      <p class="brand-desc">
+        Curating premium living experiences through thoughtfully designed
+        residences, prime locations, and long-term investment value.
       </p>
-
-      <div class="lux-footer-social">
-        <span>Follow Us:</span>
-        <a href="#">Facebook</a>
-        <a href="#">Instagram</a>
-        <a href="#">LinkedIn</a>
-      </div>
     </div>
 
-    <!-- CENTER -->
-    <div class="lux-footer-center">
-      <button class="lux-footer-btn open-form-btn">
-        BOOK A CONSULTATION
-        <span>→</span>
-      </button>
+    <div class="footer-columns">
 
-      <div class="lux-footer-links">
-      <a href="#lux-hero">Home</a>
-      <a href="#about">About Us</a>
-      <a href="#services">Services</a>
-      <a href="#project">Projects</a>
-      
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#location">Residential Sales</a>
+        <a href="#location">Site Visits</a>
+        <a href="#location">Investment Advisory</a>
+        <a href="#location">Contact Us</a>
       </div>
-    </div>
 
-    <!-- RIGHT -->
-    <div class="lux-footer-right">
-      <p>+972 50-681-8881</p>
-      <p>contactddf@gmail.com</p>
-
-      <div class="lux-footer-legal">
-        <a href="#">Terms & Conditions</a>
-        <a href="#">Privacy Policy</a>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#lux-hero">Home</a>
+        <a href="#lux-hero">Privacy Policy</a>
+        <a href="#lux-hero">Disclaimer</a>
       </div>
-    </div>
 
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="#services">Highlights</a>
+        <a href="#projects">Market Insights</a>
+        <a href="#location">Location Guides</a>
+      </div>
+
+      <div class="footer-col newsletter">
+        <h4>Subscribe</h4>
+        <div class="newsletter-box">
+          <input type="email" placeholder="Enter your email" />
+          <button>Subscribe</button>
+        </div>
+        <small>
+          By subscribing you agree to our Privacy Policy.
+        </small>
+      </div>
+
+    </div>
   </div>
 
-  <!-- huge text -->
-  <div class="lux-footer-big-text">DUBAI FACE</div>
+  <!-- MOVING TRAIN TEXT (BELOW CONTENT) -->
+  <div class="footer-marquee">
+    <div class="marquee-track">
+      <span>PREMIUM LIVING ✦ INVEST SMART ✦ SOBHA 63A ✦</span>
+      <span>PREMIUM LIVING ✦ INVEST SMART ✦ SOBHA 63A ✦</span>
+    </div>
+  </div>
 
 </footer>
 
@@ -1035,6 +978,26 @@ window.addEventListener("resize", updateSlider);
 
 
 
-</body>
+<!-- MOBILE STICKY CONTACT BAR -->
+<div class="mobile-contact-bar">
+  <a href="tel:+919599187700" class="contact-item call">
+    <i class="bi bi-telephone"></i>
+    <span>Call</span>
+  </a>
 
+  <a href="https://wa.me/919599187700" target="_blank" class="contact-item whatsapp">
+    <i class="bi bi-whatsapp"></i>
+    <span>WhatsApp</span>
+  </a>
+
+  <a href="mailto:contactddf@gmail.com" class="contact-item email">
+    <i class="bi bi-envelope"></i>
+    <span>Email</span>
+  </a>
+</div>
+
+
+
+
+</body>
 </html>
