@@ -8,7 +8,12 @@
   <link
   href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
   rel="stylesheet"
-/>
+  />
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KNQJNCN7');</script>
 </head>
 <body>
 
@@ -797,15 +802,27 @@ startAutoSlide();
       <h3>Tell Us What You Need</h3>
       <p>Our experts are ready to assist you.</p>
 
-<form class="contact-form">
-
+<form action="thankyou.php" method="POST" class="contact-form">
+  <script>
+    // Pre-fill UTM parameters from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmFields = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_keyword', 'utm_creative', 'utm_content', 'utm_term', 'utm_campaign_id', 'utm_adgroup'];
+    utmFields.forEach(field => {
+      const value = urlParams.get(field) || '';
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = field;
+      input.value = value;
+      document.querySelector('.contact-form').appendChild(input);
+    });
+  </script>
   <input type="text" name="fullname" placeholder="Full Name" aria-label="Full Name" required>
   <input type="email" name="mail" placeholder="Email Address" aria-label="Email Address" required>
-  <input type="tel" name="phone" placeholder="Phone Number" aria-label="Phone Number" required>
+  <input type="tel" name="phone" placeholder="Phone Number" aria-label="Phone Number" onChange="validatePhone(this.value)" required>
+  <input type="hidden" name="projectName" value="Sobha Sector 63A">
+  <input type="hidden" name="projectId" value="5c925275-5670-4006-8299-3fb2bb52c2d9">
 
-
-
-  <button type="submit">Request Call Back</button>
+  <button id="contact-submit" type="submit">Request Call Back</button>
 
 </form>
 
@@ -964,16 +981,32 @@ RERA Registration Details: Coming Soon ✦ Disclaimer & Privacy Policy ✦</span
     <h2>Unlock Pre Launch Pricing & Availability</h2>
     <p>Speak With a Project Specialist Today!</p>
 
-    <form>
+    <form action="thankyou.php" method="POST">
+
+      <script>
+        // Pre-fill UTM parameters from URL
+        const url_Params = new URLSearchParams(window.location.search);
+        const utm_Fields = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_keyword', 'utm_creative', 'utm_content', 'utm_term', 'utm_campaign_id', 'utm_adgroup'];
+        utm_Fields.forEach(field => {
+          const value = url_Params.get(field) || '';
+          const input = document.createElement('input');
+          input.type = 'hidden';
+          input.name = field;
+          input.value = value;
+          document.querySelector('.popup-form form').appendChild(input);
+        });
+      </script>
 
       <input type="text" name="fullname" placeholder="Full Name" required>
       <input type="email" name="mail" placeholder="Email Address" required>
-      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="tel" name="phone" placeholder="Phone Number" onChange="validatePhone(this.value)" required>
+      <input type="hidden" name="projectName" value="Sobha Sector 63A">
+      <input type="hidden" name="projectId" value="5c925275-5670-4006-8299-3fb2bb52c2d9">
 
       <!-- CONSENT (always checked & locked) -->
 
 
-      <button type="submit" class="submit-btn">
+      <button id="popup-submit" type="submit" class="submit-btn" disabled>
         Submit
       </button>
 
@@ -987,40 +1020,62 @@ RERA Registration Details: Coming Soon ✦ Disclaimer & Privacy Policy ✦</span
 
 <!-- MOBILE STICKY CONTACT BAR -->
 <div class="mobile-contact-bar">
-  <a href="tel:+91 98219 08800" class="contact-item call">
+  <a href="tel:+91 87553 34299" class="contact-item call">
     <i class="bi bi-telephone"></i>
     <span>Call</span>
   </a>
 
-   <a href="https://wa.me/919821908800?text=Hi%2C%20I%20am%20interested%20in%20Sobha%20New%20Launch%20Project%20in%20Sector%2063A%2C%20Please%20Provide%20me%20more%20Details" target="_blank" class="contact-item whatsapp">
+   <a href="https://wa.me/918755334299?text=Hi%2C%20I%20am%20interested%20in%20Sobha%20New%20Launch%20Project%20in%20Sector%2063A%2C%20Please%20Provide%20me%20more%20Details" target="_blank" class="contact-item whatsapp">
     <i class="bi bi-whatsapp"></i>
     <span>WhatsApp</span>
   </a>
 
-  <a href="mailto:sales@wdvilasati.com" class="contact-item email">
+  <a class="contact-item email open-form-btn">
     <i class="bi bi-envelope"></i>
     <span>Email</span>
   </a>
 </div>
 
+<script>
+  // Phone number checker:
+    function validatePhone(phone) {
+      const numberSplits = phone.split(" ");
+      if(numberSplits.length === 2){
+        const withPlus = numberSplits[0];
+        const contactNumber = numberSplits[1];
+        if(withPlus.match(/^\+[1-9][0-9]{0,2}$/)){
+          if(contactNumber.length === 10 && contactNumber.match(/[6-9][0-9]{9}$/)){
+            document.getElementById('popup-submit').disabled = false;
+            document.getElementById('contact-submit').disabled = false;
+          }else{
+            document.getElementById('popup-submit').disabled = true;
+            document.getElementById('contact-submit').disabled = true;
+            alert("Please enter a valid phone number.");
+          }
+        }else{
+          document.getElementById('popup-submit').disabled = true;
+          document.getElementById('contact-submit').disabled = true;
+          alert("Please enter a valid phone number.");
+        }
+      }else if(numberSplits.length === 1){
+        if(numberSplits[0].length === 10 && numberSplits[0].match(/[6-9][0-9]{9}$/)){
+          document.getElementById('popup-submit').disabled = false;
+          document.getElementById('contact-submit').disabled = false;
+        }else{
+          document.getElementById('popup-submit').disabled = true;
+          document.getElementById('contact-submit').disabled = true;
+          alert("Please enter a valid phone number.");
+        }
+      }else{
+        document.getElementById('popup-submit').disabled = true;
+        document.getElementById('contact-submit').disabled = true;
+        alert("Please enter a valid phone number.");
+      }
+    }
+</script>
 
-
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KNQJNCN7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
